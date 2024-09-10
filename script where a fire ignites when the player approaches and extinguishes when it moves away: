@@ -1,0 +1,9 @@
+function onTouch(who)
+    game.Workspace.Torch.Fire.Enabled = true
+end
+function onTouchEnded(who)
+    wait(3)
+    game.Workspace.Torch.Fire.Enabled = false
+end
+game.workspace.Area.Touched:Connect(onTouch)
+game.workspace.Area.TouchEnded:Connect(onTouchEnded)
